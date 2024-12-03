@@ -1,18 +1,14 @@
 
 
 
-
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
     <div>
-      <h1>Hello world</h1>
+      <h1>Starting React: Installing React</h1>
       <p>Wellcome to Basic React App</p>  
       <br />
       <hr />
-      <h2>Starting React</h2>
+      <h2>Installing React</h2>
       <p>First Install NodeJS and npm</p>
       <p>Check NodeJS and npm</p>
       <code>node -v</code>

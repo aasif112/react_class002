@@ -13,25 +13,23 @@ jobs:
     steps:
     - uses:  actions/checkout@v4
 
-    - name: Install NodeJS
-      uses: actions/setup-node@v4
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v4.0.3
       with:
         node-version:  '20'
 
     - name: Installing Yarn
-    - uses:  borales/actions-yarn@3.0.0
+      uses: Borales/actions-yarn@v4
       with:
+          # Yarn command
           cmd: install
 
-    - name: Install Surge
-      run: npm install –glabal surge
-      
-
-    - name: Basic React App
+    - name: Create Build
       run: yarn build
-
+      
+    - name: Install Surge
+      run: npm install --glabal surge
+      
     - name: Deploy to Surge
       run: surge ./build react-installation.surge.sh --token ${{secrets.SURGE_TOKEN}}  
   
-
-    

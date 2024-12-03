@@ -19,6 +19,7 @@ function App() {
       <br />
       <code>npm -v</code>
       <div>
+      <h2>Installing React</h2>
         <p>Start Installing React by following commands:</p>
         <ul>
           <li><h3>Installing npm package</h3></li>
@@ -40,12 +41,13 @@ function App() {
           <p>Rest is the same with yarn command.</p>
           <code>yarn start</code>
         </ul>
+      </div>
+
         <h3>Make a build</h3>
         <p>make a new optimised / developed index.html to deploy on server.</p>
         <code>yarn build</code>
         <p>This will create a new directory in the folder with name <strong>build</strong></p>
         <p>It contain index.html to be deployed on server.</p>
-      </div>
     </div>
 
   );

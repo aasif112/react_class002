@@ -1,0 +1,37 @@
+name: React Installation Guide
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: unbuntu-latest
+
+    steps:
+    - uses:  actions/checkout@v4
+
+    - name: Install NodeJS
+      uses: actions/setup-node@v4
+      with:
+        node-version:  '20'
+
+    - name: Installing Yarn
+    - uses:  borales/actions-yarn@3.0.0
+      with:
+          cmd: install
+
+    - name: Install Surge
+      run: npm install –glabal surge
+      
+
+    - name: Basic React App
+      run: yarn build
+
+    - name: Deploy to Surge
+      run: surge ./build react-installation.surge.sh --token ${{secrets.SURGE_TOKEN}}  
+  
+
+    

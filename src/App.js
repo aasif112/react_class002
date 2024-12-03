@@ -4,6 +4,7 @@
 function App() {
   return (
     <div>
+      <div className="intro">
       <h1>Starting React: Installing React</h1>
       <p>Wellcome to Basic React App</p>  
       <br />
@@ -14,7 +15,9 @@ function App() {
       <code>node -v</code>
       <br />
       <code>npm -v</code>
-      <div>
+      </div>
+
+      <div className="installation">
       <h2>Installing React</h2>
         <p>Start Installing React by following commands:</p>
         <ul>
@@ -39,11 +42,20 @@ function App() {
         </ul>
       </div>
 
+      <div className="deploy">
         <h3>Make a build</h3>
-        <p>make a new optimised / developed index.html to deploy on server.</p>
+        <p>Make a new optimised / developed index.html to deploy on server.</p>
         <code>yarn build</code>
         <p>This will create a new directory in the folder with name <strong>build</strong></p>
         <p>It contain index.html to be deployed on server.</p>
+
+        <h3>Deploy on Surge</h3>
+        <p>To deploy on surge run command</p>
+        <code>surge ./build domain-name.surge.sh </code>
+        <p></p>
+      </div>
+
+
     </div>
 
   );

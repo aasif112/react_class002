@@ -16,6 +16,7 @@ function App() {
       <p>First Install NodeJS and npm</p>
       <p>Check NodeJS and npm</p>
       <code>node -v</code>
+      <br />
       <code>npm -v</code>
       <div>
         <p>Start Installing React by following commands:</p>
